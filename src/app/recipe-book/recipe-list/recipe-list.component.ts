@@ -12,7 +12,8 @@ export class RecipeListComponent implements OnInit {
 
   recipes: Recipe[] = [
     new Recipe('cookies', 'sample cookie recipe', 'https://www.johndpotts.com/profile-pic.png' ),
-    new Recipe('pie', 'yummy pie', 'https://www.johndpotts.com/profile-pic.png')
+    new Recipe('pie', 'yummy pie', 'https://www.johndpotts.com/profile-pic.png'),
+    new Recipe('bread', 'loaf of bread', 'https://www.johndpotts.com/profile-pic.png')
   ];
 
   ngOnInit() {
