@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  recipeSelected = true;
 
+  navigateLists = function($event) {
+    $event.selection === 'recipes'
+      ? (this.recipeSelected = true)
+      : (this.recipeSelected = false);
+  };
 }
