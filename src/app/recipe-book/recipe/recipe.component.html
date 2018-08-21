@@ -2,10 +2,11 @@
  
       <div class="row">
         <div class="col-md-5">
-          <app-recipe-list></app-recipe-list>
+          <app-recipe-list (detail)="onSelectionMade($event)"></app-recipe-list>
         </div>
         <div class="col-md-7">
-          <app-recipe-detail></app-recipe-detail>
+          <app-recipe-detail *ngIf="recipe; else enterRecipe" [recipe]="recipe"></app-recipe-detail>
         </div>
       </div>
  
+<ng-template #enterRecipe><p>Please select a recipe</p></ng-template>

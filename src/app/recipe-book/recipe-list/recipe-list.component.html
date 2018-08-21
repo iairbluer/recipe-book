@@ -6,6 +6,9 @@
 <hr>
 <div class="row">
   <div class="col-xs-12">
-    <app-recipe-item  *ngFor="let recipe of recipes"  [name]="recipe.name" [imagePath]="recipe.imagePath" [description]="recipe.description"></app-recipe-item>
+    <app-recipe-item 
+    *ngFor="let recipe of recipes" 
+    [recipe]="recipe"
+    (detail)="handle($event)"></app-recipe-item>
   </div>
 </div>
